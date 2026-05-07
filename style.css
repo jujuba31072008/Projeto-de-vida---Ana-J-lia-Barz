@@ -11,35 +11,15 @@
 
 body {
   background-color: var(--cor-de-fundo);
-  font-size: 28px;
-  text-align: center;
-}
-.botao.ativo {
-  background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
-}
-
-.aba-conteudo-titulo-principal {
-  font-size: 28px;
-  text-align: center;
-}
-.aba-conteudo-titulo-secundario {
-  text-align: center;
-  color: var(--verde);
-  text-transform: uppercase;
-}
-.aba-conteudo.ativo {
-  display: block;
-}
-.aba-conteudo {
-  display: none;
-}
-
-
   color: var(--branco);
   font-family: "Chakra Petch", sans-serif;
 }
 
+.botao.ativo {
+  background-color: var(--botao-ativo);
+  border-bottom: 4px solid var(--verde);
+}
+  
 .conteudo-principal {
   display: flex;
   flex-direction: column;
@@ -93,3 +73,24 @@ body {
   .botao:last-child {
     border-radius: 0 40px 0 0;
   }
+.abas-textos {
+  background-color: var(--texto-fundo);
+  padding: 40px;
+  border-radius: 0 0 40px 40px;
+}
+
+  .aba-conteudo-titulo-principal {
+  font-size: 28px;
+  text-align: center;
+}
+.aba-conteudo-titulo-secundario {
+  text-align: center;
+  color: var(--verde);
+  text-transform: uppercase;
+}
+.aba-conteudo.ativo {
+  display: block;
+}
+.aba-conteudo {
+  display: none;
+}
