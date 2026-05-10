@@ -2,21 +2,60 @@ const botoes = document.querySelectorAll(".botao");
 const textos = document.querySelectorAll(".aba-conteudo");
 
 
+//precorre todos os botoes
 for (let i = 0; i < botoes.length; i++) {
+
+  // setando a funcao para cada botão
   botoes[i].onclick = function () {
+
+    //percorrer todos os botoes
     for (let j = 0; j < botoes.length; j++) {
+      //remove a classe ativo do botao e do conteudo
       botoes[j].classList.remove("ativo");
       textos[j].classList.remove("ativo");
     }
 
+    //setar como ativo somente oq eu cliquei
     botoes[i].classList.add("ativo");
     textos[i].classList.add("ativo");
   };
 }
+
+
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2023-10-05T00:00:00");
+const objetivos = [
+  new Date("2027-10-05T00:00:00"),
+  new Date("2028-10-05T00:00:00"),  
+  new Date("2029-10-05T00:00:00"),
+  new Date("2030-10-05T00:00:00"),
+];
+
 let tempoAtual = new Date();
 
-contadores[0].textContent = tempoObjetivo1 - tempoAtual;
+
+//precorre todos os botoes
+for (let i = 0; i < contadores.length; i++) {
+  contadores[i].textContent = formatarMilissegundos(objetivos[i] - tempoAtual);
+}
 
 
+
+function formatarMilissegundos(ms) {
+  let segundos = Math.floor(ms / 1000);
+  let minutos = Math.floor(segundos / 60);
+  let horas = Math.floor(minutos / 60);
+  let dias = Math.floor(horas / 24);
+
+  // Sobras
+  segundos = segundos % 60;
+  minutos = minutos % 60;
+  horas = horas % 24;
+
+  let resultado = "";
+  if (dias > 0) resultado += `${dias} dias, `;
+  if (horas > 0) resultado += `${horas} horas, `;
+  if (minutos > 0) resultado += `${minutos} minutos, `;
+  resultado += `${segundos} segundos`;
+
+  return resultado;
+}

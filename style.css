@@ -40,6 +40,12 @@ body {
   color: var(--verde);
 }
 
+.listaHorizontal{
+  display: flex;
+  list-style-type: none; /* Remove bolinhas */
+  padding: 0;
+    margin: 0;
+}
 .botao {
   font-family: "Crakra Petch", sans-serif;
   background-color: var(--botao-inativo);
@@ -55,9 +61,11 @@ body {
   border-right: 2px solid var(--botao-ativo);
   border-top: none;
 }
-
-.botao:first-child {
-  border-radius: 40px 40px 0 0;
+.listaHorizontal li:last-child button {
+  border-radius: 0 40px 0 0;
+}
+.listaHorizontal li:first-child button {
+  border-radius: 40px 0 0 0;
 }
 
 .botoes {
@@ -70,13 +78,12 @@ body {
 @media screen and (min-width: 768px) {
   /* Código omitido */
 }
-  .botao:last-child {
-    border-radius: 0 40px 0 0;
-  }
+
 .abas-textos {
   background-color: var(--texto-fundo);
   padding: 40px;
   border-radius: 0 0 40px 40px;
+
 }
 
   .aba-conteudo-titulo-principal {
