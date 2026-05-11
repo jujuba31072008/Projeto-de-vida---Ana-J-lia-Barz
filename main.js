@@ -24,10 +24,10 @@ for (let i = 0; i < botoes.length; i++) {
 
 const contadores = document.querySelectorAll(".contador");
 const objetivos = [
-  new Date("2027-10-05T00:00:00"),
-  new Date("2028-10-05T00:00:00"),  
-  new Date("2029-10-05T00:00:00"),
-  new Date("2030-10-05T00:00:00"),
+  new Date("2026-06-31T00:00:00"),
+  new Date("2026-05-25T00:00:00"),  
+  new Date("2026-06-20T00:00:00"),
+  new Date("2026-05-10T00:00:00"),
 ];
 
 let tempoAtual = new Date();
