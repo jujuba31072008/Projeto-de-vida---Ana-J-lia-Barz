@@ -94,3 +94,7 @@ for (let i = 0; i < contadores.length; i++) {
   document.getElementById("min" + i).textContent = calculaTempo(tempos[i])[2];
   document.getElementById("seg" + i).textContent = calculaTempo(tempos[i])[3];
 }
+const numeros = document.querySelectorAll('.numero');
+for (let i = 0; i < numeros.length; i++){
+
+}
