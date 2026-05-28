@@ -60,6 +60,7 @@ function formatarMilissegundos(ms) {
   return resultado;
 }
 
+
 comecaCronometro();
 function atualizaCronometro() {
   document.getElementById("dias0").textContent = calculaTempo(tempos[1])[0];
