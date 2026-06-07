@@ -32,9 +32,7 @@ const tempos = [
 
 let tempoAtual = new Date();
 
-
-
-
+/*
 
 function formatarMilissegundos(ms) {
   let segundos = Math.floor(ms / 1000);
@@ -55,6 +53,8 @@ function formatarMilissegundos(ms) {
 
   return resultado;
 }
+
+*/
 function comecaCronometro(){
   atualizaCronometro();
   setInterval(atualizaCronometro, 1000);//atualiza o cronometro a cada segundo
@@ -63,8 +63,6 @@ function comecaCronometro(){
 
 
 function atualizaCronometro() {
-  
-
 
   for (let i = 0; i < contadores.length; i++) {
     document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
