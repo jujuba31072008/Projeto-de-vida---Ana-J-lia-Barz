@@ -23,7 +23,7 @@ for (let i = 0; i < botoes.length; i++) {
 
 
 const contadores = document.querySelectorAll(".contador");
-const objetivos = [
+const tempos = [
   new Date("2026-07-31T00:00:00"),
   new Date("2026-11-01T00:00:00"),  
   new Date("2026-06-30T00:00:00"),
@@ -35,7 +35,7 @@ let tempoAtual = new Date();
 
 //precorre todos os botoes
 for (let i = 0; i < contadores.length; i++) {
-  contadores[i].textContent = formatarMilissegundos(objetivos[i] - tempoAtual);
+  contadores[i].textContent = formatarMilissegundos(tempos[i] - tempoAtual);
 }
 
 
