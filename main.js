@@ -33,10 +33,6 @@ const tempos = [
 let tempoAtual = new Date();
 
 
-//precorre todos os botoes
-for (let i = 0; i < contadores.length; i++) {
-  contadores[i].textContent = formatarMilissegundos(tempos[i] - tempoAtual);
-}
 
 
 
