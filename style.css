@@ -2,7 +2,7 @@
 
 :root {
   --cor-de-fundo: #f7c225;
-  --verde: #f83e86;
+  --verde: #27e405;
   --branco: #ffffff;
   --botao-ativo: #f14575;
   --botao-inativo: rgba(244, 103, 166, 0.743);
@@ -115,7 +115,7 @@ body {
   margin: 0;
 }
 .contador-digito-texto {
-  color: var(--verde);
+  color: var(--branco);
   font-size: 20px;
   margin: 0;
 }
