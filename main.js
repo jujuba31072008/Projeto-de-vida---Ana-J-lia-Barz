@@ -59,17 +59,25 @@ function formatarMilissegundos(ms) {
 
   return resultado;
 }
+function comecaCronometro(){
+  atualizaCronometro();
+  setInterval(atualizaCronometro, 1000);//atualiza o cronometro a cada segundo
+}
 
 
-comecaCronometro();
+
 function atualizaCronometro() {
-  document.getElementById("dias0").textContent = calculaTempo(tempos[1])[0];
-  document.getElementById("horas0").textContent = calculaTempo(tempos[1])[1];
-  document.getElementById("min0").textContent = calculaTempo(tempos[1])[2];
-  document.getElementById("seg0").textContent = calculaTempo(tempos[1])[3];
+  
+
+  const contadores = document.querySelectorAll(".contador");
+
   for (let i = 0; i < contadores.length; i++) {
-    //contadores[i].textContent = calculaTempo(tempos[i]);
+    document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
+    document.getElementById("horas" + i).textContent = calculaTempo(tempos[i])[1];
+    document.getElementById("min" + i).textContent = calculaTempo(tempos[i])[2];
+    document.getElementById("seg" + i).textContent = calculaTempo(tempos[i])[3];
   }
+
 }
 function calculaTempo(tempoObjetivo) {
   let tempoAtual = new Date();
@@ -88,13 +96,6 @@ function calculaTempo(tempoObjetivo) {
     return [0, 0, 0, 0];
   }
 }
-for (let i = 0; i < contadores.length; i++) {
-  document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
-  document.getElementById("horas" + i).textContent = calculaTempo(tempos[i])[1];
-  document.getElementById("min" + i).textContent = calculaTempo(tempos[i])[2];
-  document.getElementById("seg" + i).textContent = calculaTempo(tempos[i])[3];
-}
-const numeros = document.querySelectorAll('.numero');
-for (let i = 0; i < numeros.length; i++){
 
-}
+//iniciando tudo
+comecaCronometro();
