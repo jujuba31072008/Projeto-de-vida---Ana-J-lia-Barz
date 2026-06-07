@@ -65,7 +65,6 @@ function comecaCronometro(){
 function atualizaCronometro() {
   
 
-  const contadores = document.querySelectorAll(".contador");
 
   for (let i = 0; i < contadores.length; i++) {
     document.getElementById("dias" + i).textContent = calculaTempo(tempos[i])[0];
